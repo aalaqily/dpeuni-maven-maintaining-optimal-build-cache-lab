@@ -44,27 +44,26 @@
 
     <pluginManagement>
       <plugins>
-        <!-- Uncomment to fix the cache miss -->
-<!--        <plugin>-->
-<!--          <groupId>com.gradle</groupId>-->
-<!--          <artifactId>gradle-enterprise-maven-extension</artifactId>-->
-<!--          <configuration>-->
-<!--            <gradleEnterprise>-->
-<!--              <normalization>-->
-<!--                  <runtimeClassPath>-->
-<!--                    <propertiesNormalizations>-->
-<!--                        <propertiesNormalization>-->
-<!--                            <path>build-info.properties</path>-->
-<!--                            <ignoredProperties>-->
-<!--                                <ignore>timestamp</ignore>-->
-<!--                            </ignoredProperties>-->
-<!--                        </propertiesNormalization>-->
-<!--                    </propertiesNormalizations>-->
-<!--                  </runtimeClassPath>-->
-<!--              </normalization>-->
-<!--            </gradleEnterprise>-->
-<!--          </configuration>-->
-<!--        </plugin>-->
+       <plugin>
+         <groupId>com.gradle</groupId>
+         <artifactId>gradle-enterprise-maven-extension</artifactId>
+         <configuration>
+           <gradleEnterprise>
+             <normalization>
+                 <runtimeClassPath>
+                   <propertiesNormalizations>
+                       <propertiesNormalization>
+                           <path>build-info.properties</path>
+                           <ignoredProperties>
+                               <ignore>timestamp</ignore>
+                           </ignoredProperties>
+                       </propertiesNormalization>
+                   </propertiesNormalizations>
+                 </runtimeClassPath>
+             </normalization>
+           </gradleEnterprise>
+         </configuration>
+       </plugin>
       </plugins>
     </pluginManagement>
   </build>
